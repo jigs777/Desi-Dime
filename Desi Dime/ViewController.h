@@ -7,8 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "customcell.h"
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableDictionary *dataDic;
+    NSMutableArray *arraydata;
+    
+    UIActivityIndicatorView *activityIndicator;
+    
+    IBOutlet UIButton *btnTop;
+    IBOutlet UIButton *btnPopular;
 
-@interface ViewController : UIViewController
+
+    
+    IBOutlet UITableView *tableview;
+}
+
+
+-(void)getdata:(NSString*)passstring;
+
+
+- (IBAction)btnClickTop:(UIButton *)sender;
+- (IBAction)btnClcikPolular:(UIButton *)sender;
 
 
 @end
